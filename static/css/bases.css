@@ -1,0 +1,22 @@
+﻿/* ---------------------single CSS----------------------- */
+@charset "utf-8";
+body,div,p,h1,h2,h3,h4,h5,h6,ul,ol,form,input,dl,dt,dd {margin: 0; padding: 0;}
+html,body{height: 100%; width: 100%; }
+textarea {font-family: "Microsoft Yahei";}
+images,a images {display: block;border:0;}
+img{border:none;}
+a {text-decoration: none;}
+ul li{list-style:none;}
+em {font-style: normal;}
+.ta {text-align: center;}
+/* display */
+.body1 {background: #ff3801;}
+.dn{display: none;}
+/* 清除浮 动*/
+.fix{*zoom:1;}
+.fix:after{display:table; content:''; clear:both;}
+.auto {width: 960px; margin: 0 auto;}
+.fl {float: left;}
+.fr {float: right;}
+.pr{position: relative;}
+.po{position: absolute;}

@@ -1,0 +1,18 @@
+{
+	"data":[{
+			"src":"./static/img/01.jpg",
+			"price":12.5
+		},
+		{
+			"src":"./static/img/02.jpg",
+			"price":22.5
+		},
+		{
+			"src":"./static/img/03.jpg",
+			"price":33.4
+			},
+		{
+			"src":"./static/img/04.jpg",
+			"price":36.8
+		}
+]}

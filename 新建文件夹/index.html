@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+        <link rel="stylesheet" type="text/css" href="css/animate.css">
+        <script type="text/javascript" src="js/comm.js"></script>
+        
+        <style type="text/css">
+			
+        </style>
+    </head>
+    <body>
+    	<div class="swiper-container">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide page1">
+		        	<img src="img/p2_txt.png" alt="">
+		        	<img src="img/p3_txt.png" alt="">
+		        	<img src="img/p3_txt2.png" alt="">
+		        	<img src="img/p3_txt3.png" alt="">
+		        </div>
+		        <div class="swiper-slide page2">
+		        	<img src="img/p4_about.png" alt="">
+		        	<img src="img/woman.png" alt="">
+		        </div>
+		       
+		    </div>
+    
+		</div>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript">
+    	!function(n){var e=n.document,t=e.documentElement,i=1600,d=i/100,o="orientationchange"in n?"orientationchange":"resize",
+    a=function(){var n=t.clientWidth||320;n>10000&&(n=10000),t.style.fontSize=n/d+"px"};
+    e.addEventListener&&(n.addEventListener(o,a,!1),e.addEventListener("DOMContentLoaded",a,!1))}(window);
+
+
+	var mySwiper = new Swiper ('.swiper-container', {
+    loop: true,
+    direction:'vertical',
+    onSlideChangeEnd:function(swiper){
+    	var slideAry = swiper.slides;//获取当前一共有多少活动块（swiper会自动在收尾添加一个活动块 首部填原最后一个 尾部填原第一个）
+    	var curIn= swiper.activeIndex,
+    	total = slideAry.length;
+    	var targetId='page';
+    	switch(curIn){
+    		case 0:targetId+=total-2;
+    			break;
+    		case total-1:targetId+=1;
+    			break;
+    		default:targetId+=curIn;
+    	}
+
+    	//gei 当前活动块设置id,把其余的移出
+    	[].forEach.call(slideAry,function(e,i){
+    		if(curIn === i){
+    			e.id = targetId;
+    			return;
+    		}
+    		e.id = null;
+    	});
+
+    }
+    
+
+  })
+
+    </script>
+    </body>
+</html>
